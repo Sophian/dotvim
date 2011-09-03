@@ -12,6 +12,8 @@ set backspace=2		" more powerful backspacing
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+command! Status echo "All systems are go!"
+
 set ai                  " auto indenting
 set history=100         " keep 100 lines of history
 set ruler               " show the cursor position
