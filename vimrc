@@ -8,6 +8,10 @@ set backspace=2		" more powerful backspacing
 
 " ADDED BY ME START
 
+" http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 set ai                  " auto indenting
 set history=100         " keep 100 lines of history
 set ruler               " show the cursor position
