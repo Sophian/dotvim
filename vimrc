@@ -29,7 +29,7 @@ set tabstop=2
 set expandtab
 "colorscheme koehler
 set guifont=monospace\ 13
-"set number
+set number
 set ignorecase
 set vb                   " turns off visual bell
 
