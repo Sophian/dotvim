@@ -42,8 +42,8 @@ let g:vimrplugin_underscore = 0
 map <S-Enter> 0<Esc>
 map <CR> o<Esc>
 
-nnoremap <C-V> :set invpaste paste?<CR>
-set pastetoggle=<C-V>
+nnoremap <C-O> :set invpaste paste?<CR>
+set pastetoggle=<C-O>
 set showmode
 
 let mapleader = "\\"
