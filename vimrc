@@ -10,8 +10,8 @@ set backspace=2		" more powerful backspacing
 " ADDED BY ME START
 
 " http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
-"call pathogen#runtime_append_all_bundles()
-"call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 command! Status echo "All systems are go!"
 
@@ -70,7 +70,9 @@ endif
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
 " 'cindent' is on in C files, etc.
 " Also load indent files, to automatically do language-dependent indenting.
-filetype plugin indent on
+if has("autocmd")
+  filetype plugin indent on
+endif
 
 " When editing a file, always jump to the last cursor position
 autocmd BufReadPost *
