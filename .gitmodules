@@ -18,3 +18,6 @@
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
   ignore = dirty
+[submodule "Vim-R-plugin"]
+	path = Vim-R-plugin
+	url = https://github.com/jcfaria/Vim-R-plugin.git
