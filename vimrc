@@ -1,3 +1,4 @@
+" TESTING MERGE CONFLICT RESOLUTION
 " Configuration file for vim
 set modelines=0		" CVE-2007-2438
 
@@ -9,8 +10,8 @@ set backspace=2		" more powerful backspacing
 " ADDED BY ME START
 
 " http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+"call pathogen#runtime_append_all_bundles()
+"call pathogen#helptags()
 
 command! Status echo "All systems are go!"
 
@@ -27,7 +28,7 @@ set shiftwidth=2
 set tabstop=2
 " Use spaces instead of tabs
 set expandtab
-"colorscheme koehler
+colorscheme elflord
 set guifont=monospace\ 13
 set number
 set ignorecase
@@ -39,7 +40,7 @@ syntax enable
 
 let g:vimrplugin_underscore = 0
 
-map <S-Enter> 0<Esc>
+map <S-Enter> 0<Esc>j
 map <CR> o<Esc>
 
 nnoremap <C-O> :set invpaste paste?<CR>
@@ -47,7 +48,7 @@ set pastetoggle=<C-O>
 set showmode
 
 let mapleader = "\\"
-"let vimrplugin_screenvsplit = 1
+let vimrplugin_screenvsplit = 1
 let g:ScreenImpl = 'Tmux'
 "let vimrplugin_screenplugin = 0
 
