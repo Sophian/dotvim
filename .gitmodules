@@ -1,13 +1,15 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = http://github.com/tpope/vim-fugitive.git
+  ignore = dirty
 [submodule "bundle/Vim-R-plugin"]
 	path = bundle/Vim-R-plugin
-	url = https://github.com/jcfaria/Vim-R-plugin.git
+	url = https://github.com/vim-scripts/Vim-R-plugin.git
   ignore = dirty
 [submodule "bundle/screen"]
 	path = bundle/screen
 	url = https://github.com/ervandew/screen.git
+  ignore = dirty
 [submodule "bundle/vim-fakeclip"]
 	path = bundle/vim-fakeclip
 	url = https://github.com/kana/vim-fakeclip.git
@@ -15,3 +17,4 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+  ignore = dirty
