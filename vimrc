@@ -22,13 +22,28 @@ syntax on               " syntax highlighting
 "set hlsearch            " highlight the last searched term
 "filetype plugin on      " use the file type plugins
 set background=dark     " dark background
+highlight clear
+
+" http://vim.1045645.n5.nabble.com/vimdiff-colors-td1173870.html
+highlight DiffAdd term=reverse cterm=bold ctermbg=green ctermfg=white
+highlight DiffChange term=reverse cterm=bold ctermbg=yellow ctermfg=black
+highlight DiffText term=reverse cterm=bold ctermbg=magenta ctermfg=black
+highlight DiffDelete term=reverse cterm=bold ctermbg=red ctermfg=black
+
+if &diff
+  "set t_Co=256
+  set background=dark
+  "colorscheme peaksea
+else
+  colorscheme elflord
+endif
 
 set softtabstop=2
 set shiftwidth=2
 set tabstop=2
 " Use spaces instead of tabs
 set expandtab
-colorscheme elflord
+"colorscheme elflord
 set guifont=monospace\ 13
 set number
 set ignorecase
@@ -53,8 +68,8 @@ let g:ScreenImpl = 'Tmux'
 "let vimrplugin_screenplugin = 0
 
 "MySQL
-let g:dbext_default_profile_mysql_ssh = 'type=MYSQL:user=sbensaou:passwd=KamAnB3ret8:dbname=sophian:host127.0.0.1:port=3307'
-let g:dbext_default_profile_mysql_local = 'type=MYSQL:user=root:passwd=:dbname=sophian_test:extra=-t'
+let g:dbext_default_profile_mysql_ssh = 'type=MYSQL:user=sbensaou:passwd=KamAnB3ret8:dbname=sophian:host=reporting-db-2'
+"let g:dbext_default_profile_mysql_local = 'type=MYSQL:user=root:passwd=:dbname=sophian_test:extra=-t'
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
