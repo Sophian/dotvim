@@ -19,8 +19,8 @@ set ai                  " auto indenting
 set history=100         " keep 100 lines of history
 set ruler               " show the cursor position
 syntax on               " syntax highlighting
-"set hlsearch            " highlight the last searched term
-"filetype plugin on      " use the file type plugins
+set hlsearch            " highlight the last searched term
+filetype plugin on      " use the file type plugins
 set background=dark     " dark background
 highlight clear
 
@@ -58,18 +58,14 @@ let g:vimrplugin_underscore = 0
 map <S-Enter> 0<Esc>j
 map <CR> o<Esc>
 
-nnoremap <C-O> :set invpaste paste?<CR>
-set pastetoggle=<C-O>
+nnoremap <C-L> :set invpaste paste?<CR>
+set pastetoggle=<C-L>
 set showmode
 
 let mapleader = "\\"
 let vimrplugin_screenvsplit = 1
 let g:ScreenImpl = 'Tmux'
 "let vimrplugin_screenplugin = 0
-
-"MySQL
-let g:dbext_default_profile_mysql_ssh = 'type=MYSQL:user=sbensaou:passwd=KamAnB3ret8:dbname=sophian:host=reporting-db-2'
-"let g:dbext_default_profile_mysql_local = 'type=MYSQL:user=root:passwd=:dbname=sophian_test:extra=-t'
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -103,3 +99,19 @@ autocmd BufReadPost *
 au BufWrite /private/tmp/crontab.* set nowritebackup
 " Don't write backup file if vim is being called by "chpass"
 au BufWrite /private/etc/pw.* set nowritebackup
+
+" disable xml autocomplete
+let loaded_xmledit = 1
+let xml_no_auto_nesting = 1
+
+"Search for selected text, forwards or backwards.
+vnoremap <silent> * :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy/<C-R><C-R>=substitute(
+  \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>
+vnoremap <silent> # :<C-U>
+  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+  \gvy?<C-R><C-R>=substitute(
+  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>
