@@ -67,10 +67,6 @@ let vimrplugin_screenvsplit = 1
 let g:ScreenImpl = 'Tmux'
 "let vimrplugin_screenplugin = 0
 
-"MySQL
-let g:dbext_default_profile_mysql_ssh = 'type=MYSQL:user=sbensaou:passwd=KamAnB3ret8:dbname=sophian:host=reporting-db-2'
-"let g:dbext_default_profile_mysql_local = 'type=MYSQL:user=root:passwd=:dbname=sophian_test:extra=-t'
-
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 set showcmd              " display incomplete commands
