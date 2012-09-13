@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/sophian/git/smart_analytics/mapreduce/cascalog-koans/src/koans'
-let g:netrw_dirhist_2='/Users/sophian/git/smart_analytics/mapreduce/lib'
-let g:netrw_dirhist_3='/Users/sophian/git/smart_analytics/mapreduce'
-let g:netrw_dirhist_4='/Users/sophian/git/smart_analytics/mapreduce/test'
-let g:netrw_dirhist_5='/Users/sophian/git/smart_analytics/mapreduce/test/mapreduce'
-let g:netrw_dirhist_6='/Users/sophian/git/smart_analytics/mapreduce/test/mapreduce/test'
-let g:netrw_dirhist_7='/Users/sophian/git/fukupix-iphone/fukupix/en.lproj'

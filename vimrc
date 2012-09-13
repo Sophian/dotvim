@@ -24,6 +24,8 @@ filetype plugin on      " use the file type plugins
 set background=dark     " dark background
 highlight clear
 
+nnoremap <C-T> :set hlsearch!<CR>
+
 " http://vim.1045645.n5.nabble.com/vimdiff-colors-td1173870.html
 highlight DiffAdd term=reverse cterm=bold ctermbg=green ctermfg=white
 highlight DiffChange term=reverse cterm=bold ctermbg=yellow ctermfg=black
