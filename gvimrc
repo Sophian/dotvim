@@ -9,11 +9,11 @@ set backspace=2		" more powerful backspacing
 
 " ADDED BY ME START
 
-let NERDTreeWinSize=16
-
 " http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+
+let NERDTreeWinSize=32
 
 command! Status echo "All systems are go!"
 
@@ -26,7 +26,14 @@ filetype plugin on      " use the file type plugins
 set background=dark     " dark background
 highlight clear
 
-nnoremap <C-P> :set hlsearch!<CR>
+set lines=55
+set columns=178
+
+autocmd VimEnter * NERDTree " enter NERDTree automatically when entering VIM
+autocmd BufEnter * NERDTreeMirror " add folder tree to the left hand side for each tab
+" autocmd VimEnter * wincmd p " not sure, seems to add color :D
+
+nnoremap <C-T> :set hlsearch!<CR>
 
 " http://vim.1045645.n5.nabble.com/vimdiff-colors-td1173870.html
 highlight DiffAdd term=reverse cterm=bold ctermbg=green ctermfg=white
@@ -42,13 +49,15 @@ else
   colorscheme elflord
 endif
 
+set tabpagemax=100
+
 set softtabstop=2
 set shiftwidth=2
 set tabstop=2
 " Use spaces instead of tabs
 set expandtab
-"colorscheme elflord
-"set guifont=monospace\ 13
+colorscheme elflord
+"set guifont=monospace\ 14
 set guifont=monaco:h13
 set number
 set ignorecase
@@ -59,6 +68,13 @@ let g:sql_type_default = 'mysql'
 syntax enable
 
 let g:vimrplugin_underscore = 0
+
+set go-=T
+set bg=dark
+if &background == "dark"
+    hi normal guibg=black
+    set transp=8
+endif
 
 map <S-Enter> 0<Esc>j
 map <CR> o<Esc>
